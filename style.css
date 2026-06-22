@@ -1,4 +1,4 @@
-  body {
+body {
     margin: 0;
     font-family: system-ui, sans-serif;
     background: #ffffff;
@@ -10,12 +10,17 @@ header {
     border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .container {
     width: 90%;
     max-width: 1100px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
 }
 
 .logo {
