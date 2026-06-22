@@ -24,10 +24,6 @@ header {
     z-index: 20;
 }
 
-header .container {
-    padding: 14px 0;
-}
-
 /* Logo styling */
 .logo img {
     height: 48px;
@@ -37,8 +33,11 @@ header .container {
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 
+
+
 /* Align logo + nav nicely */
 header .container {
+    padding: 14px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
