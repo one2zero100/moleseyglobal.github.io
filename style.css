@@ -286,3 +286,17 @@ body.dark .news-card {
     padding: 15px;
     border-radius: 8px;
 }
+.hero-img {
+    width: 100%;
+    height: 360px;        /* Giới hạn chiều cao */
+    object-fit: cover;    /* Crop ảnh đẹp */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+body.dark .hero-title {
+    color: #fff;
+}
+
+body.dark .hero-desc {
+    color: #ccc;
+}
