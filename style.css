@@ -304,3 +304,17 @@ body.dark .hero-desc {
     height: 70px;   /* tăng từ 38px lên 70px */
     filter: drop-shadow(0 0 4px rgba(0,0,0,0.25)); /* giúp logo nổi trên nền sáng */
 }
+.hero {
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
+    border-radius: 6px;
+}
+.hero-title {
+    margin-top: 20px;
+}
