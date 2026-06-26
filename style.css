@@ -280,3 +280,9 @@ body.dark .footer a {
 body.dark .footer a:hover {
     color: #ff4d4d;
 }
+body.dark .news-card {
+    background: #2a2a2a;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+}
