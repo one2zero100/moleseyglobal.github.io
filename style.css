@@ -300,3 +300,7 @@ body.dark .hero-title {
 body.dark .hero-desc {
     color: #ccc;
 }
+.logo img {
+    height: 70px;   /* tăng từ 38px lên 70px */
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.25)); /* giúp logo nổi trên nền sáng */
+}
