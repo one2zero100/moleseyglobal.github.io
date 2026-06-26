@@ -315,6 +315,9 @@ body.dark .hero-desc {
     background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
     border-radius: 6px;
 }
+.hero-title {
+    margin-top: 20px;
+}
 @media (max-width: 600px) {
     .header-inner {
         flex-direction: column;
@@ -338,5 +341,18 @@ body.dark .hero-desc {
 
     .nav a {
         margin: 0 10px;
+    }
+}
+@media (max-width: 600px) {
+    .header-inner {
+        flex-direction: column;
+    }
+
+    .logo-and-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
     }
 }
