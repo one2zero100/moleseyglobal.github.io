@@ -318,3 +318,28 @@ body.dark .hero-desc {
 .hero-title {
     margin-top: 20px;
 }
+@media (max-width: 600px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center; /* căn giữa logo + nav + button */
+        text-align: center;
+    }
+
+    .logo img {
+        height: 70px; /* phóng to logo trên mobile */
+        margin-bottom: 10px;
+    }
+
+    .dark-btn {
+        margin-left: 0; /* bỏ margin trái */
+        margin-top: 8px;
+    }
+
+    .nav {
+        margin-top: 12px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+}
