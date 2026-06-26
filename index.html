@@ -8,73 +8,111 @@
 </head>
 <body>
 
-<header>
-    <div class="container">
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-inner">
         <div class="logo">
             <img src="logo.png" alt="Molesey Global Network Logo">
         </div>
-        <nav>
-            <a href="#about">About</a>
+        <nav class="nav">
+            <a href="#news">News</a>
             <a href="#products">Products</a>
             <a href="#vision">Vision</a>
+            <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
     </div>
 </header>
 
-<section id="about" class="section">
-    <div class="container">
-        <h3>What We Do</h3>
-        <p>Molesey Global Network Ltd is a UK‑based technology company focused on creating practical, user‑friendly digital solutions. Our work combines real‑world insights, modern engineering, and clean design.</p>
+<!-- MAIN CONTENT -->
+<main class="container">
 
-        <div class="card">
-            <h4>✔ User‑Centric Design</h4>
-            <p>We design products that are intuitive, accessible, and built around real user needs.</p>
+    <!-- HERO SECTION -->
+    <section id="news" class="hero">
+        <img src="hero.jpg" alt="Main Article Image" class="hero-img">
+        <h1 class="hero-title">Building Digital Experiences for a Smarter Future</h1>
+        <p class="hero-desc">
+            Molesey Global Network Ltd is a UK‑based technology company focused on modern, human‑centered digital solutions.
+        </p>
+    </section>
+
+    <!-- GRID NEWS SECTION -->
+    <section class="news-grid">
+        <article class="news-card">
+            <img src="img1.jpg" alt="">
+            <h3>Technology that empowers everyday life</h3>
+            <p>We design and develop digital products that enhance mobility, learning, and productivity.</p>
+        </article>
+
+        <article class="news-card">
+            <img src="img2.jpg" alt="">
+            <h3>GPLX – Driving Theory App</h3>
+            <p>A modern learning platform helping users prepare for driving theory tests with clarity and confidence.</p>
+        </article>
+
+        <article class="news-card">
+            <img src="img3.jpg" alt="">
+            <h3>Expanding our digital ecosystem</h3>
+            <p>More products are in development as we grow into a global technology ecosystem.</p>
+        </article>
+    </section>
+
+    <!-- SECTION: WHAT WE DO -->
+    <section id="about" class="section-block">
+        <h2 class="section-title">What We Do</h2>
+
+        <div class="feature-list">
+            <div class="feature-item">
+                <h4>✔ User‑Centric Design</h4>
+                <p>We build intuitive, accessible products based on real user needs.</p>
+            </div>
+
+            <div class="feature-item">
+                <h4>✔ Reliable Technology</h4>
+                <p>Our solutions are engineered for performance, stability, and long‑term scalability.</p>
+            </div>
+
+            <div class="feature-item">
+                <h4>✔ Real‑World Impact</h4>
+                <p>We focus on areas that improve daily life — mobility, learning, and digital productivity.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h4>✔ Reliable Technology</h4>
-            <p>Our solutions are engineered for performance, stability, and long‑term scalability.</p>
-        </div>
+    <!-- PRODUCTS -->
+    <section id="products" class="section-block">
+        <h2 class="section-title">Our Products</h2>
 
-        <div class="card">
-            <h4>✔ Real‑World Impact</h4>
-            <p>We focus on areas that improve daily life — mobility, learning, and digital productivity.</p>
-        </div>
-    </div>
-</section>
-
-<section id="products" class="section">
-    <div class="container">
-        <h3>Our Products</h3>
-
-        <div class="card">
-            <h4>GPLX – Driving Theory App</h4>
-            <p>A modern learning platform designed to help users prepare for driving theory tests with clarity and confidence. Built with clean UI, accurate content, and smart learning tools.</p>
+        <div class="product-card">
+            <h3>GPLX – Driving Theory App</h3>
+            <p>A clean, accurate, and modern platform for driving theory learners.</p>
         </div>
 
         <p>More digital products are currently in development as we expand our ecosystem.</p>
-    </div>
-</section>
+    </section>
 
-<section id="vision" class="section">
-    <div class="container">
-        <h3>Our Vision</h3>
-        <p>We aim to build a global ecosystem of digital products that blend technology, design, and real‑world understanding. Our mission is to create solutions that are simple, meaningful, and accessible to everyone.</p>
-    </div>
-</section>
+    <!-- VISION -->
+    <section id="vision" class="section-block">
+        <h2 class="section-title">Our Vision</h2>
+        <p>
+            We aim to build a global ecosystem of digital products that blend technology, design, and real‑world understanding.
+            Our mission is to create solutions that are simple, meaningful, and accessible to everyone.
+        </p>
+    </section>
 
-<section id="contact" class="section">
-    <div class="container">
-        <h3>Contact</h3>
+    <!-- CONTACT -->
+    <section id="contact" class="section-block">
+        <h2 class="section-title">Contact</h2>
         <p>Email: support@moleseyglobal.com</p>
         <p>Registered in England & Wales</p>
         <p>Molesey Global Network Ltd</p>
         <p>28 Vine Rd, East Molesey, KT8 9LF, United Kingdom</p>
-    </div>
-</section>
+    </section>
 
-<footer>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
     <p>© 2026 Molesey Global Network Ltd</p>
     <p><a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
 </footer>
