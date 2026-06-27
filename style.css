@@ -359,24 +359,20 @@ body.dark .footer a:hover {
     color: #ff4d4d;
 }
 .blog-nav {
-    margin-top: 20px;
-    margin-bottom: -20px;
-}
-
-.home-link {
-    color: #4da3ff;
-    font-size: 16px;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-.blog-nav {
-    margin-top: 80px;
-    margin-left: 20px;
+    margin: 80px 0 20px 20px; /* cách header + canh trái */
 }
 
 .home-link {
     color: #4da3ff;
     font-size: 16px;
     font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.2s ease;
 }
+
+.home-link:hover {
+    opacity: 0.8;
+}
+
 
