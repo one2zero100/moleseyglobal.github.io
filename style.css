@@ -239,51 +239,50 @@ body {
 }
 
 /* ============================
-   MOBILE HEADER — ICONS TOP RIGHT
+   MOBILE HEADER — FIXED VERSION
 ============================ */
 @media (max-width: 600px) {
 
+    /* Header container */
     .header-inner {
+        position: relative;
+        width: 100%;
+        padding: 12px 0 4px;
+        display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 12px 0 6px;
-        gap: 2px;
-        position: relative;
+        gap: 4px;
     }
 
+    /* Logo giữa */
     .logo img {
         height: 58px;
+        margin: 0;
     }
 
+    /* Icon lên góc phải */
     .header-icons {
         position: absolute;
         top: 6px;
         right: 10px;
+        display: flex;
         gap: 10px;
-        width: auto;
         margin: 0;
+        width: auto;
+        justify-content: flex-end;
     }
 
+    /* Menu nằm dưới logo */
     .nav {
-        margin-top: 6px;
+        margin-top: 4px;
         padding: 0;
+        width: 100%;
+        text-align: center;
     }
 
     .nav a {
         margin: 0 10px;
         display: inline-block;
-    }
-
-    .hero-title {
-        font-size: 1.7rem;
-    }
-
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .feature-list {
-        grid-template-columns: 1fr;
     }
 }
 
