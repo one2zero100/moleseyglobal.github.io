@@ -8,7 +8,7 @@ let currentLang = localStorage.getItem("lang") || DEFAULT_LANG;
 // 2. Load JSON theo ngôn ngữ
 // ===============================
 async function loadLanguage(lang) {
-    const modules = ["navbar", "services", "home", "footer", "blog"]; 
+    const modules = ["navbar", "services", "home", "footer", "blog","about"]; 
     let translations = {};
 
     for (const module of modules) {
