@@ -1,0 +1,18 @@
+{
+  "title": "Blog & Góc Nhìn",
+  "subtitle": "Các bài viết, cập nhật và góc nhìn từ Molesey Global Network.",
+  "posts": [
+    {
+      "id": "post-1",
+      "title": "Tương Lai Của Giáo Dục Toàn Cầu",
+      "date": "2026-06-20",
+      "summary": "Cách giáo dục quốc tế đang mở ra cơ hội mới cho người học."
+    },
+    {
+      "id": "post-2",
+      "title": "Xu Hướng Du Lịch 2026",
+      "date": "2026-06-18",
+      "summary": "Nhìn lại sự thay đổi của ngành du lịch toàn cầu."
+    }
+  ]
+}
