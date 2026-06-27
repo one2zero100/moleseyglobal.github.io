@@ -1,0 +1,61 @@
+{
+  "title": "5 Mảng Kinh Doanh Cốt Lõi",
+  "subtitle": "Molesey Global Network Ltd tập trung vào 5 trụ cột chiến lược nhằm mang lại giá trị trong lĩnh vực công nghệ, giáo dục, thương mại, tư vấn và dịch vụ toàn cầu.",
+
+  "areas": [
+    {
+      "id": "technology",
+      "name": "Giải Pháp Công Nghệ",
+      "description": "Cung cấp các giải pháp số hiện đại giúp doanh nghiệp xây dựng, phát triển và mở rộng bằng công nghệ.",
+      "services": [
+        "Thiết kế và phát triển website",
+        "Phát triển phần mềm và ứng dụng di động",
+        "Tư vấn công nghệ và chuyển đổi số",
+        "Tư vấn marketing và SEO"
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Giáo Dục & Đào Tạo",
+      "description": "Kết nối người học với nguồn tài nguyên giáo dục chất lượng cao và các cơ hội quốc tế.",
+      "services": [
+        "Chương trình dạy và học online",
+        "Dịch vụ giới thiệu giáo viên tiếng Anh bản xứ",
+        "Tư vấn du học Anh, Châu Âu và Mỹ"
+      ]
+    },
+    {
+      "id": "commerce",
+      "name": "Thương Mại & Dịch Vụ Mua Hộ",
+      "description": "Hỗ trợ cá nhân và doanh nghiệp với các dịch vụ thương mại an toàn, hiệu quả và đáng tin cậy.",
+      "services": [
+        "Dịch vụ chuyển – nhận tiền trung gian cho doanh nghiệp SME",
+        "Dịch vụ hỗ trợ đặt hàng, tìm nguồn hàng và mua hộ",
+        "Dịch vụ cung cấp nhân sự theo mô hình umbrella company"
+      ]
+    },
+    {
+      "id": "travel",
+      "name": "Du Lịch & Dịch Vụ Toàn Cầu",
+      "description": "Cung cấp giải pháp du lịch toàn diện cho cá nhân, gia đình và doanh nghiệp.",
+      "services": [
+        "Hỗ trợ đặt vé máy bay",
+        "Hỗ trợ làm visa và hộ chiếu",
+        "Hỗ trợ đặt phòng khách sạn",
+        "Dịch vụ thuê xe tự lái",
+        "Thiết kế tour và book tour du lịch",
+        "Tư vấn du lịch quốc tế và phát triển đối tác"
+      ]
+    },
+    {
+      "id": "consulting",
+      "name": "Tư Vấn Doanh Nghiệp",
+      "description": "Hỗ trợ doanh nghiệp và cá nhân trong quá trình vận hành, phát triển và mở rộng quốc tế.",
+      "services": [
+        "Tư vấn thành lập doanh nghiệp tại Anh, Việt Nam và quốc tế",
+        "Tư vấn vận hành và quản lý",
+        "Tổ chức sự kiện cho cá nhân và doanh nghiệp"
+      ]
+    }
+  ]
+}
