@@ -239,22 +239,27 @@ body {
 }
 
 /* ============================
-   MOBILE HEADER — FIXED VERSION
+   MOBILE HEADER — FINAL FIX
 ============================ */
 @media (max-width: 600px) {
 
-    /* Header container */
+    /* Header chỉ còn 2 dòng */
     .header-inner {
         position: relative;
         width: 100%;
-        padding: 12px 0 4px;
+        padding: 10px 0 6px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 4px;
+        gap: 0; /* không để gap lớn */
     }
 
     /* Logo giữa */
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
     .logo img {
         height: 58px;
         margin: 0;
@@ -264,7 +269,7 @@ body {
     .header-icons {
         position: absolute;
         top: 6px;
-        right: 10px;
+        right: 12px;
         display: flex;
         gap: 10px;
         margin: 0;
@@ -272,10 +277,9 @@ body {
         justify-content: flex-end;
     }
 
-    /* Menu nằm dưới logo */
+    /* Menu nằm ngay dưới logo */
     .nav {
-        margin-top: 4px;
-        padding: 0;
+        margin-top: 6px;
         width: 100%;
         text-align: center;
     }
