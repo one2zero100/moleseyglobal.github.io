@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Style -->
+    <!-- Styles -->
     <link rel="stylesheet" href="/style.css?v=4">
+    <link rel="icon" type="image/png" href="/logo.png">
 
     <style>
         .blog-header {
             text-align: center;
-            margin: 60px 0 40px;
+            margin: 120px 0 40px;
         }
 
         .blog-header h1 {
@@ -68,27 +70,69 @@
 
 <body class="dark">
 
-<header class="header"></header>
+<!-- ============================
+     HEADER (ĐỒNG BỘ TRANG CHỦ)
+============================ -->
+<header class="header">
+    <div class="container header-inner">
 
-<div class="blog-nav" style="margin-top: 80px;">
-    <a href="/index.html" class="home-link">← Home</a>
-</div>
+        <!-- Logo -->
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/logo.png" alt="Molesey Global Network Logo">
+            </a>
+        </div>
 
-<div class="container">
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="/index.html#news" data-i18n="navbar.news"></a>
+            <a href="/index.html#products" data-i18n="navbar.products"></a>
+            <a href="/index.html#vision" data-i18n="navbar.vision"></a>
+            <a href="/index.html#about" data-i18n="navbar.about"></a>
+            <a href="/blog/index.html" data-i18n="navbar.blog"></a>
+            <a href="/index.html#contact" data-i18n="navbar.contact"></a>
+        </nav>
 
-    <!-- Blog Title + Subtitle -->
+        <!-- Icons -->
+        <div class="header-icons">
+            <button id="darkToggle">🌙</button>
+            <button id="lang-toggle">🇻🇳</button>
+        </div>
+
+    </div>
+</header>
+
+<!-- ============================
+     BLOG CONTENT
+============================ -->
+<main class="container">
+
     <div class="blog-header">
         <h1 data-i18n="blog.title">Blog</h1>
         <p data-i18n="blog.subtitle">Latest updates and insights.</p>
     </div>
 
-    <!-- Blog List -->
     <div id="blog-list" class="blog-grid"></div>
 
-</div>
+</main>
 
-<!-- Scripts -->
+<!-- ============================
+     FOOTER (ĐỒNG BỘ TRANG CHỦ)
+============================ -->
+<footer class="footer">
+    <p>© 2026 Molesey Global Network Ltd</p>
+    <p>
+        <a href="/privacy.html">Privacy Policy</a> |
+        <a href="/terms.html">Terms of Service</a>
+    </p>
+</footer>
+
+<!-- ============================
+     SCRIPTS
+============================ -->
 <script src="/assets/js/lang.js?v=4"></script>
+<script src="/assets/js/darkmode.js?v=4"></script>
+<script src="/assets/js/header-grow.js?v=4"></script>
 <script src="/blog/blog.js?v=4"></script>
 
 </body>
