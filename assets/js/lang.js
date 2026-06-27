@@ -13,7 +13,7 @@ async function loadLanguage(lang) {
 
     for (const module of modules) {
         try {
-            const res = await fetch(`/assets/lang/${lang}/${module}.json?v=1`);
+            const res = await fetch(`../assets/lang/${lang}/${module}.json?v=1`);
             if (!res.ok) {
                 console.warn(`❌ Không load được file: ${module}.json`);
                 continue;
