@@ -5,23 +5,28 @@ const DEFAULT_LANG = "en";
 let currentLang = localStorage.getItem("lang") || DEFAULT_LANG;
 
 // ===============================
-// 2. Load JSON theo ngôn ngữ
+// 2. Load tất cả JSON trong thư mục ngôn ngữ
 // ===============================
 async function loadLanguage(lang) {
-    const modules = ["navbar", "services", "home", "footer", "blog", "about"];
     let translations = {};
 
-    for (const module of modules) {
-        try {
-            const res = await fetch(`../assets/lang/${lang}/${module}.json?v=1`);
-            if (!res.ok) {
-                console.warn(`❌ Không load được file: ${module}.json`);
-                continue;
+    try {
+        // Lấy danh sách file JSON trong thư mục ngôn ngữ
+        const manifest = await fetch(`../assets/lang/${lang}/manifest.json?v=1`).then(r => r.json());
+
+        // Load tất cả file JSON song song
+        const promises = manifest.map(async file => {
+            const moduleName = file.replace(".json", "");
+            const res = await fetch(`../assets/lang/${lang}/${file}?v=1`);
+            if (res.ok) {
+                translations[moduleName] = await res.json();
             }
-            translations[module] = await res.json();
-        } catch (e) {
-            console.warn(`❌ Lỗi khi load module: ${module}`, e);
-        }
+        });
+
+        await Promise.all(promises);
+
+    } catch (e) {
+        console.error("❌ Lỗi load ngôn ngữ:", e);
     }
 
     applyTranslations(translations);
@@ -32,13 +37,11 @@ async function loadLanguage(lang) {
 // ===============================
 function applyTranslations(translations) {
     document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n"); 
+        const key = el.getAttribute("data-i18n");
         const [module, field] = key.split(".");
 
         if (translations[module] && translations[module][field]) {
             el.innerHTML = translations[module][field];
-        } else {
-            console.warn(`⚠️ Không tìm thấy key: ${module}.${field}`);
         }
     });
 }
