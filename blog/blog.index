@@ -1,0 +1,14 @@
+<section class="blog-section">
+    <div class="container">
+
+        <h2 class="section-title" data-i18n="blog.title"></h2>
+        <p class="section-subtitle" data-i18n="blog.subtitle"></p>
+
+        <div id="blog-list" class="blog-grid">
+            <!-- JS sẽ render danh sách bài -->
+        </div>
+
+    </div>
+</section>
+
+<script src="/blog/blog.js"></script>
