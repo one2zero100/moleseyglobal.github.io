@@ -1,14 +1,57 @@
-<section class="post-section">
-    <div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="../style.css?v=4">
 
-        <a href="/blog/index.html" class="back-btn">← Back</a>
+    <style>
+        .post-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
 
-        <h1 id="post-title"></h1>
-        <div id="post-date" class="date"></div>
+        .post-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
 
-        <article id="post-content"></article>
+        .post-date {
+            opacity: 0.6;
+            margin-bottom: 30px;
+        }
 
-    </div>
-</section>
+        .post-content p {
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
 
-<script src="/blog/post.js"></script>
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4da3ff;
+        }
+    </style>
+</head>
+
+<body class="dark">
+
+<header class="header"></header>
+
+<div class="post-container">
+
+    <a href="index.html" class="back-link">← Back</a>
+
+    <h1 id="post-title" class="post-title"></h1>
+    <div id="post-date" class="post-date"></div>
+
+    <div id="post-content" class="post-content"></div>
+
+</div>
+
+<script src="../assets/js/lang.js?v=4"></script>
+<script src="post.js?v=4"></script>
+
+</body>
+</html>
