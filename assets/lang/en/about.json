@@ -1,0 +1,30 @@
+{
+  "hero_title": "About Molesey Global Network Ltd",
+  "hero_subtitle": "A global‑minded company built on technology, education, and international services.",
+
+  "story_title": "Our Story",
+  "story_text": "Molesey Global Network Ltd was founded with a mission to connect people, businesses, and opportunities across borders. From technology solutions to education, commerce, and global services, we aim to build a modern ecosystem that empowers individuals and organizations worldwide.",
+
+  "vision_title": "Our Vision",
+  "vision_text": "To become a global multi‑industry brand that creates meaningful impact through innovation, education, and international collaboration.",
+
+  "mission_title": "Our Mission",
+  "mission_text": "To deliver high‑quality services across technology, training, commerce, consulting, and travel, helping clients grow and succeed in a connected world.",
+
+  "values_title": "Our Core Values",
+  "values": [
+    "Integrity & Transparency",
+    "Innovation & Creativity",
+    "Global Mindset",
+    "Customer‑Centric Service"
+  ],
+
+  "pillars_title": "Our 5 Business Pillars",
+  "pillars": [
+    "Technology Solutions",
+    "Education & Training",
+    "Commerce & Procurement",
+    "Travel & Global Services",
+    "Business Consulting"
+  ]
+}
