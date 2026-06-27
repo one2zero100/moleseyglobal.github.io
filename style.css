@@ -521,3 +521,15 @@ body.dark .hero-desc {
     border: 1px solid #333;
     margin-bottom: 10px;
 }
+#lang-toggle {
+    font-size: 22px; /* bằng kích thước icon mặt trăng */
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-left: 10px; /* tạo khoảng cách với icon moon */
+    color: #fff;
+}
+
+#lang-toggle:hover {
+    opacity: 0.8;
+}
