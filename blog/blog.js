@@ -2,7 +2,7 @@ async function loadBlogList(lang) {
     const container = document.getElementById("blog-list");
     if (!container) return;
 
-    const res = await fetch(`../assets/lang/${lang}/blog.json`);
+    const res = await fetch(`/assets/lang/${lang}/blog.json`);
     const data = await res.json();
 
     container.innerHTML = "";
