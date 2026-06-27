@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
     <title>Molesey Global Network Ltd</title>
+    <meta name="description" content="Molesey Global Network Ltd – Building modern, human‑centered digital products in the UK.">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon (optional) -->
+    <link rel="icon" type="image/png" href="logo.png">
 </head>
 
-<body class="dark">
+<body>
 
-<!-- HEADER -->
+<!-- ============================
+     HEADER
+============================ -->
 <header class="header">
     <div class="container header-inner">
 
-        <div class="logo mobile-center">
+        <!-- Logo -->
+        <div class="logo">
             <img src="logo.png" alt="Molesey Global Network Logo">
         </div>
 
-        <nav class="nav mobile-center">
+        <!-- Navigation -->
+        <nav class="nav">
             <a href="#news" data-i18n="navbar.news"></a>
             <a href="#products" data-i18n="navbar.products"></a>
             <a href="#vision" data-i18n="navbar.vision"></a>
@@ -25,6 +37,7 @@
             <a href="#contact" data-i18n="navbar.contact"></a>
         </nav>
 
+        <!-- Icons -->
         <div class="header-icons">
             <button id="darkToggle">🌙</button>
             <button id="lang-toggle">🇻🇳</button>
@@ -33,35 +46,40 @@
     </div>
 </header>
 
-<!-- MAIN CONTENT -->
+<!-- ============================
+     MAIN CONTENT
+============================ -->
 <main class="container">
 
+    <!-- HERO -->
     <section id="news" class="hero">
-        <img src="hero.jpg" class="hero-img">
+        <img src="hero.jpg" class="hero-img" alt="Digital innovation">
         <h1 class="hero-title" data-i18n="home.hero_title"></h1>
         <p class="hero-desc" data-i18n="home.hero_desc"></p>
     </section>
 
+    <!-- NEWS GRID -->
     <section class="news-grid">
         <article class="news-card">
-            <img src="img1.jpg">
+            <img src="img1.jpg" alt="">
             <h3 data-i18n="home.card1_title"></h3>
             <p data-i18n="home.card1_desc"></p>
         </article>
 
         <article class="news-card">
-            <img src="img2.jpg">
+            <img src="img2.jpg" alt="">
             <h3 data-i18n="home.card2_title"></h3>
             <p data-i18n="home.card2_desc"></p>
         </article>
 
         <article class="news-card">
-            <img src="img3.jpg">
+            <img src="img3.jpg" alt="">
             <h3 data-i18n="home.card3_title"></h3>
             <p data-i18n="home.card3_desc"></p>
         </article>
     </section>
 
+    <!-- ABOUT / WHAT WE DO -->
     <section id="about" class="section-block">
         <h2 class="section-title" data-i18n="home.what_we_do_title"></h2>
 
@@ -83,6 +101,7 @@
         </div>
     </section>
 
+    <!-- PRODUCTS -->
     <section id="products" class="section-block">
         <h2 class="section-title" data-i18n="home.products_title"></h2>
 
@@ -94,13 +113,16 @@
         <p data-i18n="home.products_more"></p>
     </section>
 
+    <!-- VISION -->
     <section id="vision" class="section-block">
         <h2 class="section-title" data-i18n="home.vision_title"></h2>
         <p data-i18n="home.vision_desc"></p>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section-block">
         <h2 class="section-title" data-i18n="home.contact_title"></h2>
+
         <p>Email: support@moleseyglobal.com</p>
         <p data-i18n="home.contact_registered"></p>
         <p>Molesey Global Network Ltd</p>
@@ -109,16 +131,23 @@
 
 </main>
 
+<!-- ============================
+     FOOTER
+============================ -->
 <footer class="footer">
     <p>© 2026 Molesey Global Network Ltd</p>
-    <p><a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+    <p>
+        <a href="/privacy.html">Privacy Policy</a> |
+        <a href="/terms.html">Terms of Service</a>
+    </p>
 </footer>
 
-<!-- Scripts moved to bottom -->
+<!-- ============================
+     SCRIPTS
+============================ -->
 <script src="/assets/js/lang.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="/about/about.js"></script>
 <script src="/assets/js/darkmode.js"></script>
+<script src="/assets/js/header-shrink.js"></script>
 
 </body>
 </html>
