@@ -3,21 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
-    <link rel="stylesheet" href="../style.css?v=3">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../style.css?v=4">
+
+    <style>
+        .blog-header {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .blog-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .blog-header p {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .blog-card {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 12px;
+            transition: 0.25s ease;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .blog-card h3 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .blog-card .date {
+            font-size: 14px;
+            opacity: 0.6;
+            margin-bottom: 12px;
+        }
+
+        .blog-card p {
+            opacity: 0.85;
+            margin-bottom: 16px;
+        }
+
+        .read-more {
+            color: #4da3ff;
+            font-weight: 600;
+        }
+    </style>
 </head>
+
 <body class="dark">
 
 <header class="header">
-    <!-- copy header từ index.html -->
+    <!-- Copy header từ index.html -->
 </header>
 
 <div class="container">
-    <h1 data-i18n="blog.title">Blog</h1>
-    <p data-i18n="blog.intro">Latest updates and insights.</p>
+
+    <!-- Blog Title + Subtitle -->
+    <div class="blog-header">
+        <h1 data-i18n="blog.title">Blog</h1>
+        <p data-i18n="blog.subtitle">Latest updates and insights.</p>
+    </div>
+
+    <!-- Blog List (JS sẽ render vào đây) -->
+    <div id="blog-list" class="blog-grid"></div>
+
 </div>
 
-<script src="../assets/js/lang.js?v=3"></script>
-<script src="blog.js"></script>
+<!-- Scripts -->
+<script src="../assets/js/lang.js?v=4"></script>
+<script src="blog.js?v=4"></script>
 
 </body>
 </html>
