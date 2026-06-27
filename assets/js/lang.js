@@ -8,17 +8,19 @@ let currentLang = localStorage.getItem("lang") || DEFAULT_LANG;
 // 2. Load JSON theo ngôn ngữ
 // ===============================
 async function loadLanguage(lang) {
-    const modules = ["navbar", "services", "home", "footer", "blog","about"]; 
+    const modules = ["navbar", "services", "home", "footer", "blog", "about"];
     let translations = {};
 
     for (const module of modules) {
         try {
-            const res = await fetch(`/assets/lang/${lang}/${module}.json`);
-            if (res.ok) {
-                translations[module] = await res.json();
+            const res = await fetch(`/assets/lang/${lang}/${module}.json?v=1`);
+            if (!res.ok) {
+                console.warn(`❌ Không load được file: ${module}.json`);
+                continue;
             }
+            translations[module] = await res.json();
         } catch (e) {
-            console.warn(`Không load được file: ${module}`, e);
+            console.warn(`❌ Lỗi khi load module: ${module}`, e);
         }
     }
 
@@ -30,11 +32,13 @@ async function loadLanguage(lang) {
 // ===============================
 function applyTranslations(translations) {
     document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n"); // ví dụ: services.title
+        const key = el.getAttribute("data-i18n"); 
         const [module, field] = key.split(".");
 
         if (translations[module] && translations[module][field]) {
             el.innerHTML = translations[module][field];
+        } else {
+            console.warn(`⚠️ Không tìm thấy key: ${module}.${field}`);
         }
     });
 }
@@ -54,11 +58,7 @@ function toggleLanguage() {
 // ===============================
 function updateFlagIcon() {
     const btn = document.getElementById("lang-toggle");
-    if (currentLang === "en") {
-        btn.innerHTML = "🇻🇳"; // đang EN → icon VI
-    } else {
-        btn.innerHTML = "🇬🇧"; // đang VI → icon EN
-    }
+    btn.innerHTML = currentLang === "en" ? "🇻🇳" : "🇬🇧";
 }
 
 // ===============================
@@ -68,5 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateFlagIcon();
     loadLanguage(currentLang);
 
-    document.getElementById("lang-toggle").addEventListener("click", toggleLanguage);
+    document.getElementById("lang-toggle")
+        .addEventListener("click", toggleLanguage);
 });
