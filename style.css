@@ -358,3 +358,14 @@ body.dark .footer a {
 body.dark .footer a:hover {
     color: #ff4d4d;
 }
+.blog-nav {
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.home-link {
+    color: #4da3ff;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
