@@ -12,12 +12,12 @@ async function loadLanguage(lang) {
 
     try {
         // Lấy danh sách file JSON trong thư mục ngôn ngữ
-        const manifest = await fetch(`../assets/lang/${lang}/manifest.json?v=1`).then(r => r.json());
+        const manifest = await fetch(`/assets/lang/${lang}/manifest.json?v=1`).then(r => r.json());
 
         // Load tất cả file JSON song song
         const promises = manifest.map(async file => {
             const moduleName = file.replace(".json", "");
-            const res = await fetch(`../assets/lang/${lang}/${file}?v=1`);
+            const res = await fetch(`/assets/lang/${lang}/${file}?v=1`);
             if (res.ok) {
                 translations[moduleName] = await res.json();
             }
