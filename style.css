@@ -533,3 +533,45 @@ body.dark .hero-desc {
 #lang-toggle:hover {
     opacity: 0.8;
 }
+/* Reset chung cho 2 icon */
+#darkToggle,
+#lang-toggle {
+    font-size: 22px;        /* cùng kích thước */
+    padding: 0;             /* bỏ padding mặc định */
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;         /* tránh icon bị lệch lên/xuống */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon vàng */
+#darkToggle {
+    color: #f4c542; /* màu vàng đồng giống logo */
+}
+
+/* Container chứa 2 icon */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Desktop: căn phải */
+@media (min-width: 601px) {
+    .header-icons {
+        margin-left: auto;
+    }
+}
+
+/* Mobile: căn giữa */
+@media (max-width: 600px) {
+    .header-icons {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
