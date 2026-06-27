@@ -11,7 +11,7 @@ async function loadPost() {
     document.getElementById("post-title").innerText = postMeta.title;
     document.getElementById("post-date").innerText = postMeta.date;
 
-    const mdRes = await fetch(`/posts/${id}.md`);
+    const mdRes = await fetch(`posts/${id}.md`);
     const mdText = await mdRes.text();
 
     document.getElementById("post-content").innerHTML = marked.parse(mdText);
