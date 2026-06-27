@@ -1,0 +1,18 @@
+{
+  "title": "Blog & Insights",
+  "subtitle": "Articles, updates, and insights from Molesey Global Network.",
+  "posts": [
+    {
+      "id": "post-1",
+      "title": "The Future of Global Education",
+      "date": "2026-06-20",
+      "summary": "How international learning is transforming opportunities for students worldwide."
+    },
+    {
+      "id": "post-2",
+      "title": "Travel Trends in 2026",
+      "date": "2026-06-18",
+      "summary": "A look at how global tourism is evolving after major economic shifts."
+    }
+  ]
+}
