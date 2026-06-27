@@ -575,3 +575,24 @@ body.dark .hero-desc {
         margin-top: 10px;
     }
 }
+/* MOBILE HEADER SPACING FIX */
+@media (max-width: 600px) {
+
+    .header-inner {
+        gap: 6px; /* giảm khoảng cách giữa logo, nav, icons */
+    }
+
+    .logo {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-icons {
+        margin-top: 4px; /* giảm từ 10px xuống 4px */
+    }
+}
