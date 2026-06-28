@@ -37,7 +37,7 @@ body.dark .header {
 }
 
 .logo img {
-    height: 48px !important;
+    height: 48px;
     width: auto;
 }
 
@@ -99,7 +99,9 @@ body.dark .header {
 
 /* Logo GROW when scrolling */
 .header.shrink .logo img {
-    height: 80px; /* lớn hơn khi cuộn xuống */
+    height: 90px !important;
+    transform: scale(1.15);
+    transition: all 0.3s ease;
 }
 
 /* Icons */
