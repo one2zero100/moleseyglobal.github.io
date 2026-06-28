@@ -91,12 +91,6 @@ body.dark .header {
     align-items: center;
 }
 
-/* Logo */
-.logo img {
-    height: 60px;
-    transition: height 0.3s ease;
-}
-
 /* Logo GROW when scrolling */
 .header.shrink .logo img {
     height: 90px !important;
