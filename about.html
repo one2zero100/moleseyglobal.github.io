@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
     <title data-i18n="navbar.about"></title>
-    <link rel="stylesheet" href="/style.css?v=4">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Styles (phải dùng đúng file của blog) -->
+    <link rel="stylesheet" href="/style.css?v=4">
+    <link rel="stylesheet" href="/assets/css/about.css">
+    <link rel="icon" type="image/png" href="/logo.png">
 </head>
 
-<body>
-    <header class="header">
+<body class="dark">
+
+<!-- ============================
+     HEADER (ĐỒNG BỘ BLOG)
+============================ -->
+<header class="header">
     <div class="container header-inner">
 
         <!-- Logo -->
@@ -38,68 +45,71 @@
     </div>
 </header>
 
+<!-- ============================
+     ABOUT CONTENT
+============================ -->
+<main class="container">
+
     <section class="about-hero">
-        <div class="container">
-            <h1 data-i18n="about.hero_title"></h1>
-            <p class="subtitle" data-i18n="about.hero_subtitle"></p>
-        </div>
+        <h1 data-i18n="about.hero_title"></h1>
+        <p class="subtitle" data-i18n="about.hero_subtitle"></p>
     </section>
 
     <section class="about-section">
-        <div class="container">
-            <h2 data-i18n="about.story_title"></h2>
-            <p data-i18n="about.story_text"></p>
-        </div>
+        <h2 data-i18n="about.story_title"></h2>
+        <p data-i18n="about.story_text"></p>
     </section>
 
     <section class="about-section alt">
-        <div class="container">
-            <h2 data-i18n="about.vision_title"></h2>
-            <p data-i18n="about.vision_text"></p>
-        </div>
+        <h2 data-i18n="about.vision_title"></h2>
+        <p data-i18n="about.vision_text"></p>
     </section>
 
     <section class="about-section">
-        <div class="container">
-            <h2 data-i18n="about.mission_title"></h2>
-            <p data-i18n="about.mission_text"></p>
-        </div>
+        <h2 data-i18n="about.mission_title"></h2>
+        <p data-i18n="about.mission_text"></p>
     </section>
 
     <section class="about-section alt">
-        <div class="container">
-            <h2 data-i18n="about.values_title"></h2>
-            <div class="values-grid">
-                <div class="value-card" data-i18n="about.values.0"></div>
-                <div class="value-card" data-i18n="about.values.1"></div>
-                <div class="value-card" data-i18n="about.values.2"></div>
-                <div class="value-card" data-i18n="about.values.3"></div>
-            </div>
+        <h2 data-i18n="about.values_title"></h2>
+        <div class="values-grid">
+            <div class="value-card" data-i18n="about.values.0"></div>
+            <div class="value-card" data-i18n="about.values.1"></div>
+            <div class="value-card" data-i18n="about.values.2"></div>
+            <div class="value-card" data-i18n="about.values.3"></div>
         </div>
     </section>
 
     <section class="about-section">
-        <div class="container">
-            <h2 data-i18n="about.pillars_title"></h2>
-            <ul class="pillars-list">
-                <li data-i18n="about.pillars.0"></li>
-                <li data-i18n="about.pillars.1"></li>
-                <li data-i18n="about.pillars.2"></li>
-                <li data-i18n="about.pillars.3"></li>
-                <li data-i18n="about.pillars.4"></li>
-            </ul>
-        </div>
+        <h2 data-i18n="about.pillars_title"></h2>
+        <ul class="pillars-list">
+            <li data-i18n="about.pillars.0"></li>
+            <li data-i18n="about.pillars.1"></li>
+            <li data-i18n="about.pillars.2"></li>
+            <li data-i18n="about.pillars.3"></li>
+            <li data-i18n="about.pillars.4"></li>
+        </ul>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 Molesey Global Network Ltd</p>
-            <a href="/privacy.html">Privacy Policy</a> |
-            <a href="/terms.html">Terms of Service</a>
-        </div>
-    </footer>
+</main>
 
-    <script src="/assets/js/lang.js"></script>
-    <!-- bỏ dòng này: <script src="/about/about.js"></script> -->
+<!-- ============================
+     FOOTER (ĐỒNG BỘ BLOG)
+============================ -->
+<footer class="footer">
+    <p>© 2026 Molesey Global Network Ltd</p>
+    <p>
+        <a href="/privacy.html">Privacy Policy</a> |
+        <a href="/terms.html">Terms of Service</a>
+    </p>
+</footer>
+
+<!-- ============================
+     SCRIPTS
+============================ -->
+<script src="/assets/js/lang.js?v=4"></script>
+<script src="/assets/js/darkmode.js?v=4"></script>
+<script src="/assets/js/header-grow.js?v=4"></script>
+
 </body>
 </html>
