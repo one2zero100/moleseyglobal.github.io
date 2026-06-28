@@ -305,24 +305,14 @@ body.dark .header {
 @media (max-width: 600px) {
 
     .header-inner {
-        position: relative;
-        width: 100%;
-        padding: 10px 0 6px;
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 0;
-    }
-
-    .logo {
-        width: 100%;
-        text-align: center;
+        padding: 10px 0;
     }
 
     .logo img {
-        height: 58px;
-        margin: 0;
+        height: 58px !important;
     }
 
     .header-icons {
@@ -331,15 +321,12 @@ body.dark .header {
         right: 12px;
         display: flex;
         gap: 10px;
-        margin: 0;
-        width: auto;
-        justify-content: flex-end;
     }
 
-    /* FIX MENU MOBILE */
+    /* MENU MOBILE CHUẨN */
     .nav {
-        margin-top: 10px;
         width: 100%;
+        margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
