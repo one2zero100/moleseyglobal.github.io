@@ -37,11 +37,20 @@ async function loadLanguage(lang) {
 // ===============================
 function applyTranslations(translations) {
     document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        const [module, field] = key.split(".");
+        const path = el.getAttribute("data-i18n").split(".");
+        const module = path.shift(); // ví dụ: "about"
 
-        if (translations[module] && translations[module][field]) {
-            el.innerHTML = translations[module][field];
+        let value = translations[module];
+
+        // Duyệt sâu theo từng phần còn lại: ["values", "0"] hoặc ["vision_title"]
+        path.forEach(k => {
+            if (value !== undefined && value !== null) {
+                value = value[k];
+            }
+        });
+
+        if (value !== undefined && value !== null) {
+            el.innerHTML = value;
         }
     });
 }
