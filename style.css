@@ -294,10 +294,18 @@ body {
         display: block; /* FIX QUAN TRỌNG */
     }
 
-    .nav a {
-        margin: 0 10px;
-        display: inline-block;
-    }
+    .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+   }
+
+   .nav a {
+    display: block;
+    padding: 6px 0;
+   }
+
 }
 
 /* ============================
