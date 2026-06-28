@@ -11,21 +11,33 @@
 
 <body>
     <header class="header">
-        <div class="container nav-container">
-            <a href="/" class="logo">M</a>
+    <div class="container header-inner">
 
-            <nav class="nav">
-                <a href="/" data-i18n="navbar.news"></a>
-                <a href="/products.html" data-i18n="navbar.products"></a>
-                <a href="/vision.html" data-i18n="navbar.vision"></a>
-                <a href="/about/about.html" data-i18n="navbar.about"></a>
-                <a href="/blog/index.html" data-i18n="navbar.blog"></a>
-                <a href="/contact.html" data-i18n="navbar.contact"></a>
-            </nav>
-
-            <button id="lang-toggle">🌐</button>
+        <!-- Logo -->
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/logo.png" alt="Molesey Global Network Logo">
+            </a>
         </div>
-    </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="/index.html#news" data-i18n="navbar.news"></a>
+            <a href="/index.html#products" data-i18n="navbar.products"></a>
+            <a href="/index.html#vision" data-i18n="navbar.vision"></a>
+            <a href="/about/about.html" data-i18n="navbar.about"></a>
+            <a href="/blog/index.html" data-i18n="navbar.blog"></a>
+            <a href="/index.html#contact" data-i18n="navbar.contact"></a>
+        </nav>
+
+        <!-- Icons -->
+        <div class="header-icons">
+            <button id="darkToggle">🌙</button>
+            <button id="lang-toggle">🇻🇳</button>
+        </div>
+
+    </div>
+</header>
 
     <section class="about-hero">
         <div class="container">
