@@ -1,54 +1,110 @@
-<section class="about-hero">
-    <div class="container">
-        <h1 data-i18n="about.hero_title"></h1>
-        <p data-i18n="about.hero_subtitle"></p>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="navbar.about"></title>
 
-<section class="about-story">
-    <div class="container">
-        <h2 data-i18n="about.story_title"></h2>
-        <p data-i18n="about.story_text"></p>
-    </div>
-</section>
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
-<section class="about-vision">
-    <div class="container">
-        <h2 data-i18n="about.vision_title"></h2>
-        <p data-i18n="about.vision_text"></p>
+    <!-- About Page Styles -->
+    <link rel="stylesheet" href="/assets/css/about.css" />
+</head>
 
-        <h2 data-i18n="about.mission_title"></h2>
-        <p data-i18n="about.mission_text"></p>
-    </div>
-</section>
+<body>
 
-<section class="about-values">
-    <div class="container">
-        <h2 data-i18n="about.values_title"></h2>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="/" class="logo">M</a>
 
-        <div class="values-grid">
-            <div class="value-card" data-i18n="about.values.0"></div>
-            <div class="value-card" data-i18n="about.values.1"></div>
-            <div class="value-card" data-i18n="about.values.2"></div>
-            <div class="value-card" data-i18n="about.values.3"></div>
+            <nav class="nav">
+                <a href="/" data-i18n="navbar.news"></a>
+                <a href="/products.html" data-i18n="navbar.products"></a>
+                <a href="/vision.html" data-i18n="navbar.vision"></a>
+                <a href="/about/about.html" data-i18n="navbar.about"></a>
+                <a href="/blog/index.html" data-i18n="navbar.blog"></a>
+                <a href="/contact.html" data-i18n="navbar.contact"></a>
+            </nav>
+
+            <button id="lang-toggle">🌐</button>
         </div>
-    </div>
-</section>
+    </header>
 
-<section class="about-pillars">
-    <div class="container">
-        <h2 data-i18n="about.pillars_title"></h2>
+    <!-- Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 data-i18n="about.hero_title"></h1>
+            <p class="subtitle" data-i18n="about.hero_subtitle"></p>
+        </div>
+    </section>
 
-        <ul class="pillars-list">
-            <li data-i18n="about.pillars.0"></li>
-            <li data-i18n="about.pillars.1"></li>
-            <li data-i18n="about.pillars.2"></li>
-            <li data-i18n="about.pillars.3"></li>
-            <li data-i18n="about.pillars.4"></li>
-        </ul>
-    </div>
-</section>
+    <!-- Story -->
+    <section class="about-section">
+        <div class="container">
+            <h2 data-i18n="about.story_title"></h2>
+            <p data-i18n="about.story_text"></p>
+        </div>
+    </section>
 
-<script src="/assets/js/lang.js"></script>
-<script src="/about/about.js"></script>
+    <!-- Vision -->
+    <section class="about-section alt">
+        <div class="container">
+            <h2 data-i18n="about.vision_title"></h2>
+            <p data-i18n="about.vision_text"></p>
+        </div>
+    </section>
 
+    <!-- Mission -->
+    <section class="about-section">
+        <div class="container">
+            <h2 data-i18n="about.mission_title"></h2>
+            <p data-i18n="about.mission_text"></p>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="about-section alt">
+        <div class="container">
+            <h2 data-i18n="about.values_title"></h2>
+
+            <div class="values-grid">
+                <div class="value-card" data-i18n="about.values.0"></div>
+                <div class="value-card" data-i18n="about.values.1"></div>
+                <div class="value-card" data-i18n="about.values.2"></div>
+                <div class="value-card" data-i18n="about.values.3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars -->
+    <section class="about-section">
+        <div class="container">
+            <h2 data-i18n="about.pillars_title"></h2>
+
+            <ul class="pillars-list">
+                <li data-i18n="about.pillars.0"></li>
+                <li data-i18n="about.pillars.1"></li>
+                <li data-i18n="about.pillars.2"></li>
+                <li data-i18n="about.pillars.3"></li>
+                <li data-i18n="about.pillars.4"></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Molesey Global Network Ltd</p>
+            <a href="/privacy.html">Privacy Policy</a> |
+            <a href="/terms.html">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/lang.js"></script>
+    <script src="/about/about.js"></script>
+
+</body>
+</html>
