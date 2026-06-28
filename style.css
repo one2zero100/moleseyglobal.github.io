@@ -21,6 +21,55 @@ body {
     margin: auto;
 }
 
+/* ===== BLOG HEADER STYLE ===== */
+
+body.dark .header {
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo img {
+    height: 48px !important;
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 28px;
+}
+
+.nav a {
+    color: #fff;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: 0.25s;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+.header-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.header-icons button {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+}
+
 /* ============================
    HEADER BASE
 ============================ */
@@ -87,55 +136,6 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-}
-
-/* ===== BLOG HEADER STYLE ===== */
-
-body.dark .header {
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 0;
-}
-
-.logo img {
-    height: 48px !important;
-    width: auto;
-}
-
-.nav {
-    display: flex;
-    gap: 28px;
-}
-
-.nav a {
-    color: #fff;
-    font-weight: 500;
-    opacity: 0.85;
-    transition: 0.25s;
-}
-
-.nav a:hover {
-    opacity: 1;
-}
-
-.header-icons {
-    display: flex;
-    gap: 16px;
-}
-
-.header-icons button {
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    color: #fff;
 }
 
 /* Desktop layout */
