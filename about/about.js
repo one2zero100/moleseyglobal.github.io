@@ -2,7 +2,7 @@ async function loadAbout(lang) {
     const res = await fetch(`/assets/lang/${lang}/about.json`);
     const data = await res.json();
 
-    // Render text fields (hero, story, vision, mission)
+    // Chỉ render các key dạng text
     const textKeys = [
         "hero_title",
         "hero_subtitle",
@@ -21,23 +21,6 @@ async function loadAbout(lang) {
         if (el) el.innerHTML = data[key];
     });
 
-    // Render values (array)
-    const values = document.querySelectorAll(".value-card");
-    values.forEach((el, i) => {
-        el.innerHTML = data.values[i];
-    });
-
-    // Render pillars (array)
-    const pillars = document.querySelectorAll(".pillars-list li");
-    pillars.forEach((el, i) => {
-        el.innerHTML = data.pillars[i];
-    });
+    // KHÔNG render values và pillars ở đây nữa
+    // Vì lang.js đã tự động render theo data-i18n="about.values.0"
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    loadAbout(currentLang);
-});
-
-document.getElementById("lang-toggle").addEventListener("click", () => {
-    setTimeout(() => loadAbout(currentLang), 150);
-});
