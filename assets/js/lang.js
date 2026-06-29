@@ -102,10 +102,8 @@ function switchLanguage() {
     currentLang = currentLang === "vi" ? "en" : "vi";
     localStorage.setItem("lang", currentLang);
     updateFlag();
-    applyTranslations(); // nếu bạn có hàm i18n
+    applyTranslations();
 }
 
 langToggle.addEventListener("click", switchLanguage);
-
-// chạy lần đầu khi load trang
 updateFlag();
