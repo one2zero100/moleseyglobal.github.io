@@ -1,4 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
-  <rect width="640" height="480" fill="#DA251D"/>
-  <polygon fill="#FFFF00" points="320,120 360,260 500,260 385,340 425,480 320,390 215,480 255,340 140,260 280,260"/>
+  <!-- Bo góc + nền đỏ -->
+  <rect width="640" height="480" rx="28" fill="#DA251D"/>
+
+  <!-- Viền mỏng -->
+  <rect width="640" height="480" rx="28" fill="none" stroke="#8A1B1B" stroke-width="8"/>
+
+  <!-- Bóng nhẹ -->
+  <rect width="640" height="480" rx="28" fill="rgba(0,0,0,0.12)"/>
+
+  <!-- Ngôi sao vàng chuẩn, nằm đúng chính giữa -->
+  <polygon fill="#FFFF00"
+    points="
+      320,140
+      360,260
+      485,260
+      385,330
+      425,450
+      320,370
+      215,450
+      255,330
+      155,260
+      280,260
+    "
+  />
 </svg>
