@@ -420,7 +420,7 @@ body.dark .footer a:hover {
   height: 22px;
 }
 
-/* FIX FLAG ICON + DARK MODE ICON */
+/* FIX FLAG + DARK MODE ICONS */
 .header-icons button {
     background: none;
     border: none;
@@ -430,13 +430,16 @@ body.dark .footer a:hover {
 
 /* DARK MODE ICON */
 #darkToggle {
-    font-size: 22px !important;   /* giữ kích thước icon mặt trăng */
-    color: #f4c542 !important;     /* giữ màu vàng */
+    font-size: 22px !important;
+    color: #f4c542 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* LANGUAGE ICON */
 #lang-toggle {
-    font-size: 0 !important;       /* chặn text VN/GB */
+    font-size: 0 !important;
     padding: 0;
     display: flex;
     align-items: center;
@@ -448,3 +451,4 @@ body.dark .footer a:hover {
     height: 22px;
     display: block;
 }
+
