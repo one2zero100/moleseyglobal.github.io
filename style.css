@@ -419,21 +419,3 @@ body.dark .footer a:hover {
   width: 22px;
   height: 22px;
 }
-
-/* FIX FLAG ICON DISAPPEARING */
-.header-icons #lang-toggle {
-    font-size: 0 !important; /* chặn text VN/GB */
-}
-
-#lang-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-}
-
-#lang-toggle img {
-    width: 22px;
-    height: 22px;
-    display: block;
-}
