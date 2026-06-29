@@ -107,7 +107,10 @@ body.dark .header {
     gap: 10px;
 }
 
-#darkToggle,
+#darkToggle {
+    font-size: 22px;
+}
+
 #lang-toggle {
     font-size: 0; /* Ngăn text fallback VN/GB xuất hiện */
     background: none;
