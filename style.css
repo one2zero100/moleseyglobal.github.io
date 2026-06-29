@@ -109,11 +109,12 @@ body.dark .header {
 
 #darkToggle,
 #lang-toggle {
-    font-size: 22px;
+    font-size: 0; /* Ngăn text fallback VN/GB xuất hiện */
     background: none;
     border: none;
     cursor: pointer;
     line-height: 1;
+    padding: 0;
 }
 
 #darkToggle {
