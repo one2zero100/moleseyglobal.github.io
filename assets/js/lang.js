@@ -68,10 +68,10 @@ function toggleLanguage() {
 // ===============================
 // 5. Đổi icon quốc kỳ
 // ===============================
-function updateFlagIcon() {
-    const btn = document.getElementById("lang-toggle");
-    btn.innerHTML = currentLang === "en" ? "🇻🇳" : "🇬🇧";
-}
+//function updateFlagIcon() {
+//    const btn = document.getElementById("lang-toggle");
+//    btn.innerHTML = currentLang === "en" ? "🇻🇳" : "🇬🇧";
+//}
 
 // ===============================
 // 6. Khởi động
@@ -83,3 +83,29 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("lang-toggle")
         .addEventListener("click", toggleLanguage);
 });
+
+// ===============================
+// 7. Hình lá cờ
+// ===============================
+const langToggle = document.getElementById("lang-toggle");
+let currentLang = localStorage.getItem("lang") || "vi";
+
+function updateFlag() {
+    const flagSrc = currentLang === "vi" 
+        ? "assets/flags/gb.svg" 
+        : "assets/flags/vn.svg";
+
+    langToggle.innerHTML = `<img src="${flagSrc}" class="flag-icon">`;
+}
+
+function switchLanguage() {
+    currentLang = currentLang === "vi" ? "en" : "vi";
+    localStorage.setItem("lang", currentLang);
+    updateFlag();
+    applyTranslations(); // nếu bạn có hàm i18n
+}
+
+langToggle.addEventListener("click", switchLanguage);
+
+// chạy lần đầu khi load trang
+updateFlag();
