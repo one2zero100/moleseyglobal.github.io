@@ -11,11 +11,9 @@ async function loadLanguage(lang) {
     let translations = {};
 
     try {
-        // Lấy danh sách file JSON từ manifest
         const manifestUrl = `assets/lang/${lang}/manifest.json?v=1`;
         const manifest = await fetch(manifestUrl).then(r => r.json());
 
-        // Load từng file JSON
         const promises = manifest.map(async file => {
             const moduleName = file.replace(".json", "");
             const fileUrl = `assets/lang/${lang}/${file}?v=1`;
@@ -43,11 +41,10 @@ async function loadLanguage(lang) {
 function applyTranslations(translations) {
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const path = el.getAttribute("data-i18n").split(".");
-        const module = path.shift(); // ví dụ: "navbar"
+        const module = path.shift();
 
         let value = translations[module];
 
-        // Duyệt sâu theo key
         path.forEach(k => {
             if (value && value[k] !== undefined) {
                 value = value[k];
