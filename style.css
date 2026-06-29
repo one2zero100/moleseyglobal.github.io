@@ -419,36 +419,3 @@ body.dark .footer a:hover {
   width: 22px;
   height: 22px;
 }
-
-/* FIX FLAG + DARK MODE ICONS */
-.header-icons button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    line-height: 1;
-}
-
-/* DARK MODE ICON */
-#darkToggle {
-    font-size: 22px !important;
-    color: #f4c542 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* LANGUAGE ICON */
-#lang-toggle {
-    font-size: 0 !important;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#lang-toggle img {
-    width: 22px;
-    height: 22px;
-    display: block;
-}
-
