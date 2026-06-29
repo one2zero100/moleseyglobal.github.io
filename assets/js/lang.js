@@ -11,22 +11,27 @@ async function loadLanguage(lang) {
     let translations = {};
 
     try {
-        // Lấy danh sách file JSON trong thư mục ngôn ngữ
-        const manifest = await fetch(`/assets/lang/${lang}/manifest.json?v=1`).then(r => r.json());
+        // Lấy danh sách file JSON từ manifest
+        const manifestUrl = `assets/lang/${lang}/manifest.json?v=1`;
+        const manifest = await fetch(manifestUrl).then(r => r.json());
 
-        // Load tất cả file JSON song song
+        // Load từng file JSON
         const promises = manifest.map(async file => {
             const moduleName = file.replace(".json", "");
-            const res = await fetch(`/assets/lang/${lang}/${file}?v=1`);
+            const fileUrl = `assets/lang/${lang}/${file}?v=1`;
+
+            const res = await fetch(fileUrl);
             if (res.ok) {
                 translations[moduleName] = await res.json();
+            } else {
+                console.warn(`⚠ Không load được file: ${fileUrl}`);
             }
         });
 
         await Promise.all(promises);
 
-    } catch (e) {
-        console.error("❌ Lỗi load ngôn ngữ:", e);
+    } catch (err) {
+        console.error("❌ Lỗi load ngôn ngữ:", err);
     }
 
     applyTranslations(translations);
@@ -38,72 +43,55 @@ async function loadLanguage(lang) {
 function applyTranslations(translations) {
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const path = el.getAttribute("data-i18n").split(".");
-        const module = path.shift(); // ví dụ: "about"
+        const module = path.shift(); // ví dụ: "navbar"
 
         let value = translations[module];
 
-        // Duyệt sâu theo từng phần còn lại: ["values", "0"] hoặc ["vision_title"]
+        // Duyệt sâu theo key
         path.forEach(k => {
-            if (value !== undefined && value !== null) {
+            if (value && value[k] !== undefined) {
                 value = value[k];
+            } else {
+                value = null;
             }
         });
 
-        if (value !== undefined && value !== null) {
+        if (value !== null && value !== undefined) {
             el.innerHTML = value;
         }
     });
 }
 
 // ===============================
-// 4. Chuyển đổi ngôn ngữ
+// 4. Cập nhật icon quốc kỳ (SVG)
+// ===============================
+function updateFlag() {
+    const flagSrc = currentLang === "en"
+        ? "assets/flags/gb.svg"
+        : "assets/flags/vn.svg";
+
+    const btn = document.getElementById("lang-toggle");
+    btn.innerHTML = `<img src="${flagSrc}" class="flag-icon">`;
+}
+
+// ===============================
+// 5. Chuyển đổi ngôn ngữ
 // ===============================
 function toggleLanguage() {
     currentLang = currentLang === "en" ? "vi" : "en";
     localStorage.setItem("lang", currentLang);
-    updateFlagIcon();
+
+    updateFlag();
     loadLanguage(currentLang);
 }
-
-// ===============================
-// 5. Đổi icon quốc kỳ
-// ===============================
-//function updateFlagIcon() {
-//    const btn = document.getElementById("lang-toggle");
-//    btn.innerHTML = currentLang === "en" ? "🇻🇳" : "🇬🇧";
-//}
 
 // ===============================
 // 6. Khởi động
 // ===============================
 document.addEventListener("DOMContentLoaded", () => {
-    updateFlagIcon();
+    updateFlag();
     loadLanguage(currentLang);
 
     document.getElementById("lang-toggle")
         .addEventListener("click", toggleLanguage);
 });
-
-// ===============================
-// 7. Hình lá cờ
-// ===============================
-const langToggle = document.getElementById("lang-toggle");
-let currentLang = localStorage.getItem("lang") || "vi";
-
-function updateFlag() {
-    const flagSrc = currentLang === "vi" 
-        ? "assets/flags/gb.svg" 
-        : "assets/flags/vn.svg";
-
-    langToggle.innerHTML = `<img src="${flagSrc}" class="flag-icon">`;
-}
-
-function switchLanguage() {
-    currentLang = currentLang === "vi" ? "en" : "vi";
-    localStorage.setItem("lang", currentLang);
-    updateFlag();
-    applyTranslations();
-}
-
-langToggle.addEventListener("click", switchLanguage);
-updateFlag();
