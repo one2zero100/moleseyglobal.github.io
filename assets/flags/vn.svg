@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
-  <!-- Bo góc + nền đỏ -->
+  <!-- Nền đỏ bo góc -->
   <rect width="640" height="480" rx="28" fill="#DA251D"/>
 
   <!-- Viền mỏng -->
@@ -8,19 +8,19 @@
   <!-- Bóng nhẹ -->
   <rect width="640" height="480" rx="28" fill="rgba(0,0,0,0.12)"/>
 
-  <!-- Ngôi sao vàng chuẩn, nằm đúng chính giữa -->
+  <!-- Ngôi sao vàng chuẩn, được nâng lên để cân đối -->
   <polygon fill="#FFFF00"
     points="
-      320,140
-      360,260
-      485,260
-      385,330
-      425,450
-      320,370
-      215,450
-      255,330
-      155,260
-      280,260
+      320,110
+      360,240
+      485,240
+      385,315
+      425,440
+      320,360
+      215,440
+      255,315
+      155,240
+      280,240
     "
   />
 </svg>
