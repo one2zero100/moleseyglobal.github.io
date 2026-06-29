@@ -109,6 +109,12 @@ body.dark .header {
 
 #darkToggle {
     font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    color: #f4c542;
 }
 
 #lang-toggle {
@@ -118,10 +124,6 @@ body.dark .header {
     cursor: pointer;
     line-height: 1;
     padding: 0;
-}
-
-#darkToggle {
-    color: #f4c542;
 }
 
 /* Navigation */
