@@ -411,3 +411,10 @@ body.dark .footer a:hover {
 .home-link:hover {
     opacity: 0.8;
 }
+/* ============================
+   Flags
+============================ */
+.flag-icon {
+  width: 22px;
+  height: 22px;
+}
