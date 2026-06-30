@@ -88,6 +88,7 @@ body.dark .header {
     padding: 12px 0;
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 /* Logo GROW when scrolling */
