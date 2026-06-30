@@ -137,17 +137,8 @@ body.dark .header {
 .nav a {
     margin: 0 12px;
     text-decoration: none;
+    color: #333;     /* ❌ Ghi đè màu trắng thành màu xám đậm */
     font-weight: 500;
-}
-
-/* màu mặc định cho header sáng */
-.header:not(.dark) .nav a {
-    color: #333;
-}
-
-/* màu cho dark mode */
-body.dark .nav a {
-    color: #fff;
 }
 
 /* Desktop layout */
