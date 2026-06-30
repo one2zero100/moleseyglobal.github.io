@@ -87,9 +87,8 @@ body.dark .header {
     width: 100%;
     padding: 12px 0;
     display: flex;
-    justify-content: space-between;   /* ✔ giữ layout ngang */
-    align-items: center;               /* ✔ giữ menu cạnh logo */
-    /* ❌ flex-direction: column; — đã xóa */
+    justify-content: space-between;   /* ✔ FIXED */
+    align-items: center;               /* ✔ FIXED */
 }
 
 /* Logo GROW when scrolling */
@@ -119,7 +118,7 @@ body.dark .header {
 }
 
 #lang-toggle {
-    font-size: 0; /* Ngăn text fallback VN/GB xuất hiện */
+    font-size: 0;
     background: none;
     border: none;
     cursor: pointer;
@@ -130,14 +129,14 @@ body.dark .header {
 /* Navigation */
 .nav {
     margin-top: 8px;
-    width: 100%;
+    width: auto;               /* ✔ FIXED */
     text-align: center;
 }
 
 .nav a {
     margin: 0 12px;
     text-decoration: none;
-    color: #333;     /* ❌ Ghi đè màu trắng thành màu xám đậm */
+    color: #333;
     font-weight: 500;
 }
 
@@ -165,150 +164,12 @@ body.dark .header {
 }
 
 /* ============================
-   HERO SECTION
-============================ */
-.hero {
-    margin-top: 30px;
-    position: relative;
-}
-
-.hero-img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 15px;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
-    border-radius: 6px;
-}
-
-.hero-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.hero-desc {
-    font-size: 1.1rem;
-    color: #444;
-}
-
-/* ============================
-   NEWS GRID
-============================ */
-.news-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.news-card img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.news-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-}
-
-.news-card p {
-    color: #555;
-    font-size: 0.95rem;
-}
-
-/* ============================
-   SECTION BLOCKS
-============================ */
-.section-block {
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 2px solid #eee;
-}
-
-.section-title {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-/* ============================
-   FEATURE LIST
-============================ */
-.feature-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.feature-item {
-    background: #f7f7f7;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.feature-item h4 {
-    margin-bottom: 8px;
-}
-
-/* ============================
-   PRODUCT CARD
-============================ */
-.product-card {
-    background: #fafafa;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-/* ============================
-   FOOTER
-============================ */
-.footer {
-    margin-top: 60px;
-    padding: 30px 0;
-    text-align: center;
-    background: #fafafa;
-    border-top: 1px solid #eee;
-}
-
-.footer a {
-    color: #333;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: #c30000;
-}
-
-/* ============================
-   RESPONSIVE
-============================ */
-@media (max-width: 900px) {
-    .news-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .feature-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* ============================
    MOBILE HEADER — FIXED VERSION
 ============================ */
 @media (max-width: 600px) {
 
     .header-inner {
-        flex-direction: column;
+        flex-direction: column;        /* ✔ chỉ mobile */
         align-items: center;
         justify-content: flex-start;
         padding: 10px 0;
@@ -326,7 +187,6 @@ body.dark .header {
         gap: 10px;
     }
 
-    /* MENU MOBILE CHUẨN */
     .nav {
         width: 100%;
         margin-top: 10px;
@@ -365,59 +225,6 @@ body.dark .nav a:hover {
     color: #ff4d4d;
 }
 
-body.dark .hero-title {
-    color: #fff;
-}
-
-body.dark .hero-desc {
-    color: #ccc;
-}
-
-body.dark .news-card {
-    background: #2a2a2a;
-    border: 1px solid #333;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-body.dark .feature-item,
-body.dark .product-card {
-    background: #2a2a2a;
-    border: 1px solid #333;
-}
-
-body.dark .section-title {
-    color: #fff;
-}
-
-body.dark .footer {
-    background: #222;
-    border-top: 1px solid #333;
-}
-
-body.dark .footer a {
-    color: #ddd;
-}
-
-body.dark .footer a:hover {
-    color: #ff4d4d;
-}
-.blog-nav {
-    margin: 80px 0 20px 20px; /* cách header + canh trái */
-}
-
-.home-link {
-    padding: 6px 14px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 8px;
-    color: #4da3ff;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.home-link:hover {
-    opacity: 0.8;
-}
 /* ============================
    Flags
 ============================ */
