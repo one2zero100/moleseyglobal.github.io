@@ -87,8 +87,9 @@ body.dark .header {
     width: 100%;
     padding: 12px 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;   /* ✔ giữ layout ngang */
+    align-items: center;               /* ✔ giữ menu cạnh logo */
+    /* ❌ flex-direction: column; — đã xóa */
 }
 
 /* Logo GROW when scrolling */
