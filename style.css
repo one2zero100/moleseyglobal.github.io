@@ -232,9 +232,3 @@ body.dark .nav a:hover {
   width: 22px;
   height: 22px;
 }
-/* ============================
-   FIX MENU CHO TRANG BLOG
-============================ */
-body.dark .nav a {
-    color: #fff !important;
-}
