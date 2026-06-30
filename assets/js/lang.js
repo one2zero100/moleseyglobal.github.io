@@ -64,8 +64,8 @@ function applyTranslations(translations) {
 // ===============================
 function updateFlag() {
     const flagSrc = currentLang === "en"
-        ? "assets/flags/gb.svg"
-        : "assets/flags/vn.svg";
+        ? "/assets/flags/gb.svg"
+        : "/assets/flags/vn.svg";
 
     const btn = document.getElementById("lang-toggle");
     btn.innerHTML = `<img src="${flagSrc}" class="flag-icon">`;
