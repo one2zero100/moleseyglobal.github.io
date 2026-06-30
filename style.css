@@ -82,15 +82,6 @@ body.dark .header {
     transition: all 0.25s ease;
 }
 
-.header-inner {
-    position: relative;
-    width: 100%;
-    padding: 12px 0;
-    display: flex;
-    justify-content: space-between;   /* ✔ FIXED */
-    align-items: center;               /* ✔ FIXED */
-}
-
 /* Logo GROW when scrolling */
 .header.shrink .logo img {
     height: 90px !important;
