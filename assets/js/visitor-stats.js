@@ -71,3 +71,14 @@ async function updateVisitorStats() {
 }
 
 updateVisitorStats();
+
+document.getElementById("toggle-stats").onclick = () => {
+  const box = document.getElementById("stats-box");
+  if (box.style.display === "none") {
+    box.style.display = "block";
+    toggleStats.innerText = "Hide";
+  } else {
+    box.style.display = "none";
+    toggleStats.innerText = "Show";
+  }
+};
