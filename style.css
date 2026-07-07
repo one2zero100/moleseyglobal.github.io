@@ -302,4 +302,23 @@ body {
     transform: translateY(0);
   }
 }
+/* ============================
+   Toogle for guest counter
+============================ */
+#toggle-stats {
+  position: fixed;
+  bottom: 20px;
+  right: 160px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.8;
+}
+#toggle-stats:hover {
+  opacity: 1;
+}
 
