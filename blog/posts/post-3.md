@@ -1,4 +1,4 @@
-## 📣 Thông báo nhỏ từ mình và Molesey Global Network Ltd
+# 📣 Thông báo nhỏ từ mình và Molesey Global Network Ltd
 
 Hiện tại mình và Molesey Global Network Ltd đang phối hợp triển khai một số dự án thuộc hệ sinh thái công nghệ – giáo dục – trải nghiệm thực địa mà mình đã ấp ủ từ lâu.
 Trong đó, ứng dụng học lái xe là một trong các dự án đầu tiên được chính thức chuyển giao cho Molesey Global Network Ltd quản lý trên Google Play. Đây là bước đánh dấu việc mình bắt đầu đưa các sản phẩm cá nhân vào một hệ thống chuyên nghiệp hơn, có định hướng rõ ràng và có khả năng mở rộng trong tương lai.
