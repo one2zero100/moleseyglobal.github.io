@@ -1,4 +1,4 @@
-## XU HƯỚNG DU LỊCH 2026: Người ta không còn đi để "check-in", mà đi để sống.
+## Người ta không còn đi để "check-in", mà đi để sống.
 
 Nếu như vài năm trước, một chuyến du lịch thành công được đo bằng số lượng địa điểm check-in hay hàng trăm bức ảnh đăng Facebook, thì năm 2026 lại chứng kiến một sự thay đổi rất rõ rệt.
 
