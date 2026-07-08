@@ -16,7 +16,7 @@ Mình rất mong anh em bạn bè dành chút thời gian:
 Mọi đóng góp của mọi người đều là chất liệu quý giá để mình cải thiện sản phẩm ngày một tốt hơn, phục vụ cộng đồng một cách thiết thực nhất.
 Nếu mọi người cảm thấy app ổn, tặng mình 5 sao và một lời nhắn dễ thương cũng là nguồn động lực lớn để ứng dụng lan tỏa đến nhiều người hơn nữa.
 📲 Link tải ứng dụng trên Google Play:
-https://play.google.com/store/apps/details...
+https://play.google.com/store/apps/details?id=com.dcpham.gplx
 ---
 # 🌐 Hệ sinh thái mà Molesey Global Network Ltd đang xây dựng
 Tất cả các dự án của mình và Molesey Global Network Ltd đều xoay quanh một trục chung:
