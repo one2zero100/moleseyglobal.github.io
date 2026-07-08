@@ -307,20 +307,24 @@ body {
 /* ============================
    Toogle for guest counter
 ============================ */
-#toggle-stats {
-  position: fixed;
-  bottom: 20px;
-  right: 160px;
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  opacity: 0.8;
-}
-#toggle-stats:hover {
-  opacity: 1;
+#stats-box.hidden {
+  transform: translateX(120%);
 }
 
+#stats-toggle {
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #222;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+#stats-toggle:hover {
+  opacity: 1;
+}
