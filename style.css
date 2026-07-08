@@ -84,7 +84,7 @@ body {
 /* Navigation */
 .nav {
     display: flex;
-    gap: 32px;
+    gap: 20px;
 }
 
 .nav a {
@@ -146,7 +146,7 @@ body {
 .section-divider {
   height: 1px;
   background: linear-gradient(to right, transparent, #d4af37, transparent);
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 /* ============================
