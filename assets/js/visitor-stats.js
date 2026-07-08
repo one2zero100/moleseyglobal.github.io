@@ -11,21 +11,71 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-// Helper: get week number
+// ===============================
+// Firebase Modular SDK (v10+)
+// ===============================
+import { 
+  initializeApp 
+} from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+
+import { 
+  getFirestore, 
+  doc, 
+  getDoc, 
+  updateDoc, 
+  setDoc 
+} from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+// ===============================
+// Firebase Config
+// ===============================
+const firebaseConfig = {
+  apiKey: "AIzaSyAHQDY1JDVN_sT3DiZNxZuybV5WELvCDo",
+  authDomain: "molesey-global-counter.firebaseapp.com",
+  projectId: "molesey-global-counter",
+  storageBucket: "molesey-global-counter.firebasestorage.app",
+  messagingSenderId: "58053646346",
+  appId: "1:58053646346:web:f2e4f54dec210445d454901",
+  measurementId: "G-Y2NY2TDE7M"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// ===============================
+// Helper: Week Number
+// ===============================
 function getWeekNumber(date) {
   const firstDay = new Date(date.getFullYear(), 0, 1);
   const diff = date - firstDay;
   return Math.floor(diff / (1000 * 60 * 60 * 24 * 7));
 }
 
+// ===============================
+// Main Visitor Counter Logic
+// ===============================
 async function updateVisitorStats() {
-  const ref = db.collection("stats").doc("visitors");
-  const doc = await ref.get();
+  const ref = doc(db, "stats", "visitors");
+  const snapshot = await getDoc(ref);
 
-  if (!doc.exists) return;
-
-  const data = doc.data();
   const now = new Date();
+
+  // If document doesn't exist → create it
+  if (!snapshot.exists()) {
+    await setDoc(ref, {
+      today: 1,
+      week: 1,
+      month: 1,
+      year: 1,
+      total: 1,
+      lastVisit: now
+    });
+    updateUI(1, 1, 1, 1, 1);
+    return;
+  }
+
+  const data = snapshot.data();
   const last = data.lastVisit.toDate();
 
   const isNewDay = now.getDate() !== last.getDate();
@@ -33,52 +83,31 @@ async function updateVisitorStats() {
   const isNewMonth = now.getMonth() !== last.getMonth();
   const isNewYear = now.getFullYear() !== last.getFullYear();
 
-  let today = data.today;
-  let week = data.week;
-  let month = data.month;
-  let year = data.year;
-  let total = data.total;
-
-  // Reset counters when cycle changes
-  if (isNewDay) today = 0;
-  if (isNewWeek) week = 0;
-  if (isNewMonth) month = 0;
-  if (isNewYear) year = 0;
-
-  // Increase counters
-  today++;
-  week++;
-  month++;
-  year++;
-  total++;
-
-  // Save back to Firestore
-  await ref.set({
-    today,
-    week,
-    month,
-    year,
-    total,
+  const updated = {
+    today: isNewDay ? 1 : data.today + 1,
+    week: isNewWeek ? 1 : data.week + 1,
+    month: isNewMonth ? 1 : data.month + 1,
+    year: isNewYear ? 1 : data.year + 1,
+    total: data.total + 1,
     lastVisit: now
-  });
+  };
 
-  // Update UI
-  document.getElementById("today").innerText = today;
-  document.getElementById("week").innerText = week;
-  document.getElementById("month").innerText = month;
-  document.getElementById("year").innerText = year;
-  document.getElementById("total").innerText = total;
+  await updateDoc(ref, updated);
+  updateUI(updated.today, updated.week, updated.month, updated.year, updated.total);
 }
 
-updateVisitorStats();
+// ===============================
+// Update UI
+// ===============================
+function updateUI(today, week, month, year, total) {
+  document.getElementById("today").textContent = today;
+  document.getElementById("week").textContent = week;
+  document.getElementById("month").textContent = month;
+  document.getElementById("year").textContent = year;
+  document.getElementById("total").textContent = total;
+}
 
-document.getElementById("toggle-stats").onclick = () => {
-  const box = document.getElementById("stats-box");
-  if (box.style.display === "none") {
-    box.style.display = "block";
-    toggleStats.innerText = "Hide";
-  } else {
-    box.style.display = "none";
-    toggleStats.innerText = "Show";
-  }
-};
+// ===============================
+// Run on page load
+// ===============================
+updateVisitorStats();
