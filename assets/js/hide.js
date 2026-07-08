@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("toggle-stats");
-  const stats = document.getElementById("visitor-stats");
+  const stats = document.getElementById("stats-box");
 
   // Nếu không tìm thấy button hoặc counter thì dừng
   if (!btn || !stats) {
