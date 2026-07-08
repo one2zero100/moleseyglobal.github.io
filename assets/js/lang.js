@@ -11,12 +11,12 @@ async function loadLanguage(lang) {
     let translations = {};
 
     try {
-        const manifestUrl = `assets/lang/${lang}/manifest.json?v=1`;
+        const manifestUrl = `/assets/lang/${lang}/manifest.json?v=1`;
         const manifest = await fetch(manifestUrl).then(r => r.json());
 
         const promises = manifest.map(async file => {
             const moduleName = file.replace(".json", "");
-            const fileUrl = `assets/lang/${lang}/${file}?v=1`;
+            const fileUrl = `/assets/lang/${lang}/${file}?v=1`;
 
             const res = await fetch(fileUrl);
             if (res.ok) {
