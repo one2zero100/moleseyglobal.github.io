@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // initial arrow: « (box visible)
-  toggle.textContent = "«";
+  toggle.textContent = "»";
 
   toggle.addEventListener("click", () => {
     const isHidden = box.classList.toggle("hidden");
