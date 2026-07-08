@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   toggle.addEventListener("click", () => {
     const isHidden = box.classList.toggle("hidden");
     // when hidden, show » ; when visible, show «
-    toggle.textContent = isHidden ? "»" : "«";
+    toggle.textContent = isHidden ? "«" : "»";
   });
 });
