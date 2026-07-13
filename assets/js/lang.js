@@ -75,7 +75,7 @@ function updateFlag() {
 // 5. Chuyển đổi ngôn ngữ
 // ===============================
 function toggleLanguage() {
-    currentLang = currentLang === "en" ? "vi" : "en";
+    currentLang = currentLang === "en" ? "en" : "vi";
     localStorage.setItem("lang", currentLang);
 
     updateFlag();
