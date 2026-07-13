@@ -64,8 +64,8 @@ function applyTranslations(translations) {
 // ===============================
 function updateFlag() {
     const flagSrc = currentLang === "en"
-        ? "/assets/flags/gb.svg"
-        : "/assets/flags/vn.svg";
+        ? "/assets/flags/vn.svg"
+        : "/assets/flags/gb.svg";
 
     const btn = document.getElementById("lang-toggle");
     btn.innerHTML = `<img src="${flagSrc}" class="flag-icon">`;
@@ -75,7 +75,7 @@ function updateFlag() {
 // 5. Chuyển đổi ngôn ngữ
 // ===============================
 function toggleLanguage() {
-    currentLang = currentLang === "en" ? "en" : "vi";
+    currentLang = currentLang === "en" ? "vi" : "en";
     localStorage.setItem("lang", currentLang);
 
     updateFlag();
